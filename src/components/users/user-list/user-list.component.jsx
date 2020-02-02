@@ -1,5 +1,4 @@
 import React, { Fragment, useContext } from "react";
-import PropTypes from "prop-types";
 import GithubContext from "../../../context/github/githubContext";
 
 import UserItem from "../user-item/user-item.component";
@@ -22,11 +21,6 @@ const UserList = () => {
     </Fragment>
   );
 };
-
-// UserList.propTypes = {
-//   loading: PropTypes.bool.isRequired,
-//   users: PropTypes.array.isRequired
-// };
 
 const userListStyle = {
   display: "grid",

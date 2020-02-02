@@ -10,7 +10,6 @@ const AlertState = props => {
 
   // set Alert
   const setAlert = (msg, type) => {
-    console.log(msg, type);
     dispatch({
       type: SET_ALERT,
       payload: {
