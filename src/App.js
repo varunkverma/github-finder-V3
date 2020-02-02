@@ -12,25 +12,33 @@ import PageNotFound from "./components/pages/page-not-found.component";
 
 import "./App.css";
 
-const App = () => (
-  <GithubState>
-    <AlertState>
-      <Router>
-        <div className="App">
-          <Navbar />
-          <div className="container">
-            <Alert />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/user/:login" component={UserProfile} />
-              <Route component={PageNotFound} />
-            </Switch>
+const App = () => {
+  let website =
+    process.env.NODE_ENV === "production" ? "/github-finder-V3" : "";
+  return (
+    <GithubState>
+      <AlertState>
+        <Router>
+          <div className="App">
+            <Navbar />
+            <div className="container">
+              <Alert />
+              <Switch>
+                <Route exact path={`${website}/`} component={Home} />
+                <Route exact path={`${website}/about`} component={About} />
+                <Route
+                  exact
+                  path={`${website}/user/:login`}
+                  component={UserProfile}
+                />
+                <Route component={PageNotFound} />
+              </Switch>
+            </div>
           </div>
-        </div>
-      </Router>
-    </AlertState>
-  </GithubState>
-);
+        </Router>
+      </AlertState>
+    </GithubState>
+  );
+};
 
 export default App;
