@@ -15,6 +15,7 @@ import "./App.css";
 const App = () => {
   let website =
     process.env.NODE_ENV === "production" ? "/github-finder-V3" : "";
+  console.log(process.env.NODE_ENV);
   return (
     <GithubState>
       <AlertState>
