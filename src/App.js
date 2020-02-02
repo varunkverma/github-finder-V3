@@ -25,7 +25,7 @@ const App = () => {
             <div className="container">
               <Alert />
               <Switch>
-                <Route exact path={`${website}/`} component={Home} />
+                <Route exact path={`/github-finder-V3/`} component={Home} />
                 <Route exact path={`${website}/about`} component={About} />
                 <Route
                   exact
